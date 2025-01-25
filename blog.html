@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/favicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>RAGINI-MEHENDI</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/bootstrap.css" />
+  <!-- font awesome style -->
+  <link href="/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <!-- header section strats -->
+  <header class="header_section innerpage_header">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="index.html">
+          <span>
+            RAGINI MEHENDI DESIGN
+          </span>
+        </a>
+        <div class="" id="">
+
+          <div class="custom_menu-btn">
+            <button onclick="openNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="shop.html">Order</a>
+                <a href="blog.html">Blog</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+
+  <!-- blog section -->
+
+  <section class="blog_section ">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Latest From Blog
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/b1.jpg" alt="">
+              <h4 class="blog_date">
+                06 <br>
+                January
+              </h4>
+            </div>
+            <div class="detail-box">
+              <h5>
+                Bridal Mehendi
+              </h5>
+              <p>
+                From traditional Indian motifs to modern minimalism, My collection is curated to make every bride feel special.              </p>
+              
+                <a button onclick="confirmOrder()" class="slider-link">
+                  Order Now
+                </a>
+                <script>
+                  function confirmOrder() {
+                    const userResponse = confirm("Are you sure you want to place the order?");
+                    if (userResponse) {
+                      // Redirect to another page
+                      window.location.href = "https://www.instagram.com/mehendiartistrajkot_7?igsh=dmdod21jZDN3czk0"; // Replace with your desired page
+                    } else {
+                      // Stay on the same page
+                      alert("Order canceled!");
+                    }
+                  }
+                </script>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/b2.jpg" alt="">
+              <h4 class="blog_date">
+                15 <br>
+                March
+              </h4>
+            </div>
+            <div class="detail-box">
+              <h5>
+                Festive Mehendi Design
+              </h5>
+              <p>
+                Celebrate Diwali, Karva Chauth, and other festivals with our vibrant patterns.              </p>
+                <a button onclick="confirmOrder()" class="slider-link">
+                  Order Now
+                </a>
+                <script>
+                  function confirmOrder() {
+                    const userResponse = confirm("Are you sure you want to place the order?");
+                    if (userResponse) {
+                      // Redirect to another page
+                      window.location.href = "https://www.instagram.com/mehendiartistrajkot_7?igsh=dmdod21jZDN3czk0"; // Replace with your desired page
+                    } else {
+                      // Stay on the same page
+                      alert("Order canceled!");
+                    }
+                  }
+                </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end blog section -->
+
+  
+
+ 
+
+
+  <!-- jQery -->
+  <script src="/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="/custom.js"></script>
+
+</body>
+
+</html>
