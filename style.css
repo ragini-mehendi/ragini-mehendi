@@ -326,7 +326,9 @@ a:focus {
   -webkit-transition: all .2s;
   transition: all .2s;
   margin-top: 35px;
+  
 }
+
 
 .slider_section .detail-box .slider-link:hover {
   background-color: #fd9c6b;
@@ -429,7 +431,7 @@ a:focus {
   margin-top: 45px;
 }
 
-.shop_section .btn-box a {
+.shop_section .btn-box button {
   display: inline-block;
   padding: 10px 40px;
   background-color: #fd9c6b;
@@ -440,7 +442,23 @@ a:focus {
   transition: all .2s;
 }
 
-.shop_section .btn-box a:hover {
+.shop_section .btn-box button:hover {
+  background-color: transparent;
+  color: #fd9c6b;
+}
+
+.shop_section .btn-box .starting-price {
+  display: inline-block;
+  padding: 10px 40px;
+  background-color: #fd9c6b;
+  color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #fd9c6b;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.shop_section .btn-box .starting-price:hover {
   background-color: transparent;
   color: #fd9c6b;
 }
@@ -545,7 +563,7 @@ a:focus {
   font-weight: bold;
 }
 
-.offer_section .box .detail-box a {
+.offer_section .box .detail-box button{
   display: inline-block;
   padding: 8px 40px;
   background-color: transparent;
@@ -555,9 +573,17 @@ a:focus {
   -webkit-transition: all .2s;
   transition: all .2s;
   margin-top: 10px;
+  
 }
 
-.offer_section .box .detail-box a:hover {
+/* .offer_section .box .detail-box button{
+  
+  border:none;
+  background: transparent;
+  color: #fd9c6b;
+} */
+
+.offer_section .box .detail-box button:hover {
   background-color: #fd9c6b;
   color: #ffffff;
 }
@@ -649,7 +675,7 @@ a:focus {
   font-size: 15px;
 }
 
-.blog_section .box .detail-box a {
+.blog_section .box .detail-box button {
   display: inline-block;
   padding: 10px 30px;
   background-color: transparent;
@@ -660,7 +686,7 @@ a:focus {
   transition: all .2s;
 }
 
-.blog_section .box .detail-box a:hover {
+.blog_section .box .detail-box button:hover {
   background-color: #160e0b;
   color: #ffffff;
 }
