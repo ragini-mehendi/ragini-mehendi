@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: 50px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-header h2 {
+      margin: 0 0 15px;
+      font-size: 22px;
+      color: #333;
+      text-align: center;
+    }
+
+    form label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: #555;
+    }
+
+    form input,
+    form select,
+    form button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    form input:focus,
+    form select:focus {
+      outline: none;
+      border-color: #007BFF;
+      box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+    }
+
+    form button {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #0056b3;
+    }
+
+    .price-label {
+      font-weight: bold;
+      font-size: 16px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-header">
+      <h2>Order Form</h2>
+    </div>
+    <form id="orderForm" onsubmit="return confirmOrder(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      
+      <label for="product">Design:</label>
+      <select id="product" name="product" onchange="updatePrice()" required>
+        <option value="" disabled selected>Select a Design</option>
+        <option value="product1" data-price="4000">Bridal</option>
+        <option value="product2" data-price="6000">Bridal-Figure</option>
+        <option value="product3" data-price="250">Sider</option>
+        <option value="product3" data-price="450">To-Be-Mehendi</option>
+        <option value="product3" data-price="500">Latest</option>
+        <option value="product3" data-price="550">Bridal-Feet</option>
+        <option value="product3" data-price="250">Sider-Feet</option>
+        <option value="product3" data-price="350">Simple</option>
+        <option value="product3" data-price="550">Nail Gel Polish</option>
+        <option value="product3" data-price="300">Simple Nail Paint</option>
+      </select>
+      
+      <label for="price">Price:</label>
+      <input type="text" id="price" name="price" value="Select a product" readonly>
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+
+  <script>
+    // Function to dynamically update the price based on the selected product
+    function updatePrice() {
+      const productSelect = document.getElementById("product");
+      const selectedOption = productSelect.options[productSelect.selectedIndex];
+      const price = selectedOption.getAttribute("data-price");
+      const priceField = document.getElementById("price");
+      
+      if (price) {
+        priceField.value = "₹" + price; // Correct price formatting
+      } else {
+        priceField.value = "Select a Design"; // Default message
+      }
+    }
+
+    // Function to handle order submission and show the dialog
+    function confirmOrder(event) {
+      event.preventDefault();  // Prevent form submission
+
+      // Show a confirmation dialog
+      const userChoice = confirm("Your order has been placed! DM me on Instagram. Do you want to proceed to Instagram?");
+      
+      if (userChoice) {
+        // Redirect to Instagram if user clicks "Yes"
+        window.location.href = "https://www.instagram.com/yourusername"; // Replace with your Instagram URL
+      } else {
+        // Show cancellation message if user clicks "No"
+        alert("Your order has been cancelled.");
+      }
+    }
+  </script>
+</body>
+</html>
